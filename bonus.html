@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бонусы от стримера</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: url('12/casino 2.jpg') center/cover no-repeat fixed;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 0;
+        }
+
+        .header {
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(45deg, #ff00ff, #800080);
+            color: white;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .bonus-container {
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 400px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .bonus-card {
+            width: 100%;
+            height: 120px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            text-decoration: none;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .bonus-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+            z-index: 1;
+        }
+
+        .bonus-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            color: white;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .casino-name {
+            font-size: 1.4em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 5px;
+        }
+
+        .bonus-details {
+            font-size: 0.9em;
+            color: #ffffff;
+            opacity: 0.9;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+
+        .arrow-icon {
+            background: rgba(255,255,255,0.2);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 18px;
+            backdrop-filter: blur(5px);
+        }
+
+        .bonus-card:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+
+        .bonus-card:hover .arrow-icon {
+            background: rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>БОНУС ОТ СТРИМЕРА</h2>
+        <p>Получите приветственный бонус для игры 🎰</p>
+        <div>Выбери свой бонус ⬇️⬇️⬇️</div>
+    </div>
+
+    <div class="bonus-container">
+        <a href="https://84946302.rdtracer.com" class="bonus-card" style="background-image: url('12/vegas.jpg');">
+            <div class="bonus-info">
+                <div>
+                    <div class="casino-name">VIP-азарт у VEGAS</div>
+                    <div class="bonus-details">Vegas 🎲 120FS 21+ промокод: Zanos</div>
+                </div>
+                <div class="arrow-icon">➜</div>
+            </div>
+        </a>
+
+        <a href="https://tinyurl.com/e5usd728" class="bonus-card" style="background-image: url('12/win boss.jpg');">
+            <div class="bonus-info">
+                <div>
+                    <div class="casino-name">WINBOSS</div>
+                    <div class="bonus-details">WinBoss 24+ 🎲 250 FS +100%</div>
+                </div>
+                <div class="arrow-icon">➜</div>
+            </div>
+        </a>
+
+        <a href="https://tinyurl.com/zjshds" class="bonus-card" style="background-image: url('12/parik.jpg');">
+            <div class="bonus-info">
+                <div>
+                    <div class="casino-name">PARIK 24</div>
+                    <div class="bonus-details">Parik24 18+ 🎲 100FS +200FB</div>
+                </div>
+                <div class="arrow-icon">➜</div>
+            </div>
+        </a>
+
+        <a href="https://44073972.rdtracer.com" class="bonus-card" style="background-image: url('12/777.jpg');">
+            <div class="bonus-info">
+                <div>
+                    <div class="casino-name">777</div>
+                    <div class="bonus-details">777 24+ 🎲 77FS+75%</div>
+                </div>
+                <div class="arrow-icon">➜</div>
+            </div>
+        </a>
+
+        <a href="https://gtrk.link/?serial=61316438&creative_id=4175" class="bonus-card" style="background-image: url('12/gorrila.jpg');">
+            <div class="bonus-info">
+                <div>
+                    <div class="casino-name">GORILLA</div>
+                    <div class="bonus-details">Gorilla +21 🎲 300FS+570%</div>
+                </div>
+                <div class="arrow-icon">➜</div>
+            </div>
+        </a>
+    </div>
+</body>
+</html> 
